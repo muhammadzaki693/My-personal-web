@@ -165,6 +165,22 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "hurry"
+version = "1.1"
+description = "Hurry! helps you run your routine commands and scripts faster."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "hurry.filesize"
+version = "0.9"
+description = "A simple Python library for human readable file sizes (or anything sized in bytes)."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "idna"
 version = "3.3"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -355,10 +371,10 @@ packaging = ">=21.3"
 tomli = {version = ">=2.0", markers = "python_version < \"3.11\""}
 
 [package.extras]
-validation = ["pydantic (>=1.7.4)"]
+doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
+gen_docs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
 global = ["appdirs (>=1.4.4)"]
-gen_docs = ["pytoolconfig", "sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx (>=4.5.0)"]
-doc = ["sphinx (>=4.5.0)", "tabulate (>=0.8.9)"]
+validation = ["pydantic (>=1.7.4)"]
 
 [[package]]
 name = "replit"
@@ -405,8 +421,8 @@ python-versions = ">=3.7"
 pytoolconfig = ">=1.1.2"
 
 [package.extras]
-doc = ["sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx (>=4.5.0)", "pytoolconfig"]
-dev = ["build (>=0.7.0)", "pytest-timeout (>=2.1.0)", "pytest (>=7.0.1)"]
+dev = ["pytest (>=7.0.1)", "pytest-timeout (>=2.1.0)", "build (>=0.7.0)"]
+doc = ["pytoolconfig", "sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)"]
 
 [[package]]
 name = "toml"
@@ -510,7 +526,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "f99affe8f7cb4e0a46113ad07a5a65dbac3629c12f9d7886f000f5b426d0751d"
+content-hash = "da739e9b673dc73ece89969cab6c7c3bc2c821ce22b359d7e8c8dca7da783405"
 
 [metadata.files]
 aiohttp = []
@@ -528,6 +544,8 @@ flask-autoindex = []
 flask-silk = []
 frozenlist = []
 future = []
+hurry = []
+"hurry.filesize" = []
 idna = []
 importlib-metadata = []
 itsdangerous = []
