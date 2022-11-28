@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, abort, send_file
 from hurry.filesize import size, alternative
+from werkzeug import secure_filename
 import os
 from datetime import datetime
 port = os.environ.get('PORT', 8080)
@@ -32,5 +33,12 @@ def files(reqpath):
 		return send_file(abs_path)
 	files = os.listdir(abs_path)
 	return render_template("files.html",files=files,getmtime=os.path.getmtime,getctime=os.path.getctime,size=size,alternative=alternative,getsize=os.path.getsize,path=os.path.curdir,fromtimestamp=datetime.fromtimestamp)
+
+@app.route("/uploader", methods=["GET","POST"])
+def upload():
+	if request.method == "POST":
+		f = secure_filename(file.filename)
+		f.save(os.path.join(request.args.get("dir"),f))
+		return "success"
 
 app.run(host='0.0.0.0', port=port)
