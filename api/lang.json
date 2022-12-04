@@ -1,0 +1,23 @@
+{
+	"php": {
+		"creator": "Rasmuf lerdof",
+		"released": "1995",
+		"extension": [".php",".phar",".phtml",".pht",".phps"],
+		"mascot": "The ElePHPant",
+		"os": ["unix-like","windows","ibm i","openVMS"]
+	},
+	"python": {
+		"creator": "Giudo van Rossum",
+		"released": "20 february 1991",
+		"extension": [".py",".pyx",".pyz",".pyd",".pyi",".pyo"],
+		"mascot": null,
+		"os": ["windows","mac-os","Linux/Unix","android","etc"]
+	},
+	"java": {
+		"creator": "James Gosling",
+		"released": "23 May 1995",
+		"extension": [".java",".class",".jar",".jmod"],
+		"mascot": "Duke",
+		"os": "all"
+	}
+}
