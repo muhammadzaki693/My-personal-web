@@ -13,6 +13,7 @@ from flask import Flask, render_template, url_for, request, jsonify
 from pygments.formatters import HtmlFormatter
 
 port = os.environ.get('PORT', 8080)
+host = "0.0.0.0"
 
 for apifile in glob.glob("api/*.json"):
 	with open(apifile) as f:
@@ -54,4 +55,4 @@ def zakipy():
 	readme_template = md_css_string + readme_string
 	return readme_template
 
-app.run(host='0.0.0.0', port=port)
+app.run(host=host, port=port)
